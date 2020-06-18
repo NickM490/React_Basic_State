@@ -1,25 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import LightSwitch from './Components/LightSwitch';
+import PersonCard from './Components/PersonCard';
+import Counter from './Components/useState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <LightSwitch/>
+        
+        <PersonCard firstName = "Jane" lastName = "Doe" Age = {25} hairColor = "Brown" />
+        <PersonCard firstName = "Joe" lastName = "Horn" Age = {55} hairColor = "Grey" />
+        <PersonCard firstName = "Bill" lastName = "Brock" Age = {88} hairColor = "Blue" />
+
+        <Counter/>
+    </>
   );
 }
 
